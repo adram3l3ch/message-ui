@@ -1,8 +1,8 @@
 .menubar {
     width: min-content;
-    background: $white;
-    height: 100vh;
-    padding: $padding-1;
+    background: var(--white);
+    height: 100%;
+    padding: var(--padding-1);
 
     &__icons {
         height: 100%;
@@ -15,21 +15,21 @@
 
         .menubar__icon {
             font-size: 1.25rem;
-            color: $black-600;
+            color: var(--black-600);
             cursor: pointer;
             position: relative;
 
             &:hover:not(.logo) {
-                color: $primary;
+                color: var(--primary);
             }
 
             &--active {
-                color: $primary;
+                color: var(--primary);
 
                 &::after {
                     position: absolute;
                     content: "";
-                    background-color: $primary;
+                    background-color: var(--primary);
                     width: 0.5rem;
                     height: 150%;
                     left: -1.6rem;
@@ -41,8 +41,8 @@
         }
 
         .logo {
-            background-color: $primary;
-            color: $white;
+            background-color: var(--primary);
+            color: var(--white);
             width: 2rem;
             height: 2rem;
             display: flex;
@@ -51,6 +51,9 @@
             border-radius: 0.3rem;
             margin-bottom: 2rem;
         }
+    }
+    @media (max-width: 1000px) {
+        display: none;
     }
 }
 

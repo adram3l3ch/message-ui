@@ -6,6 +6,7 @@
 @import "./components/messages/messages";
 @import "./components/footer/footer";
 @import "./components/chat/chat";
+@import "./components/about/about";
 
 *,
 *::after,
@@ -33,17 +34,43 @@ img {
 
 body {
     font-family: "Poppins", sans-serif;
+    background-color: rgb(223, 223, 223);
 }
 
 :root {
-    font-size: calc(1rem - 1px);
+    font-size: calc(1rem - 2px);
+}
+
+#root {
+    display: grid;
+    place-content: center;
+    height: 100vh;
 }
 
 .app {
+    width: 90vw;
+    height: 90vh;
+    max-width: 2000px;
     display: grid;
     grid-template-columns: auto auto 5fr 2fr;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    @media (max-width: 1350px) {
+        grid-template-columns: auto auto 1fr;
+    }
+    @media (max-width: 1000px) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .home {
-    background-color: $black-200;
+    background-color: var(--black-200);
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 1000px) {
+        display: none;
+    }
 }

@@ -1,0 +1,97 @@
+.about {
+    border-left: 1px solid var(--black-300);
+    min-width: 25rem;
+    background-color: var(--white);
+
+    &__header {
+        display: grid;
+        grid-template-rows: auto 1fr;
+        gap: 3rem;
+        padding: var(--padding-2);
+        border-bottom: 1px solid var(--black-300);
+
+        .ellipsis {
+            margin-left: auto;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .about__group {
+            margin-inline: auto;
+            width: max-content;
+            text-align: center;
+            img {
+                width: 6rem;
+                aspect-ratio: 1;
+                border-radius: 50%;
+                margin-bottom: 0.5rem;
+            }
+
+            p {
+                color: var(--black-400);
+            }
+        }
+    }
+
+    &__participants,
+    &__SharedMedias {
+        padding: var(--padding-2);
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+
+            a {
+                color: var(--primary);
+            }
+        }
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            .about__participant,
+            .about__SharedMedia {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                img {
+                    width: 3rem;
+                    aspect-ratio: 1;
+                    border-radius: 50%;
+                }
+
+                h3 {
+                    font-weight: 500;
+                    font-size: 1rem;
+                }
+
+                p {
+                    font-size: 0.9rem;
+                    color: var(--black-400);
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1350px) {
+        display: none;
+    }
+}
+
+.about__SharedMedia {
+    .icon {
+        width: 2.5rem;
+        aspect-ratio: 1;
+        background-color: var(--black-200);
+        display: grid;
+        place-content: center;
+        border-radius: 0.5rem;
+        color: var(--black-600);
+        font-size: 1.5rem;
+    }
+}

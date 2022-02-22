@@ -1,11 +1,11 @@
 .footer {
-    margin: $padding-2;
+    margin: var(--padding-2);
     margin-top: auto;
     display: flex;
     align-items: center;
     gap: 1rem;
-    background-color: $white;
-    padding: $padding-2 - 0.5rem $padding-2;
+    background-color: var(--white);
+    padding: calc(var(--padding-2) - 0.5rem) var(--padding-2);
     border-radius: 0.5rem;
 
     .live {
@@ -15,8 +15,8 @@
         padding: 0.1rem 0.3rem;
         font-weight: 500;
         border-radius: 0.3rem;
-        background-color: $black-200;
-        color: $primary;
+        background-color: var(--black-200);
+        color: var(--primary);
         p {
             font-size: 0.9rem;
         }
@@ -53,19 +53,19 @@
         aspect-ratio: 1;
         border-radius: 50%;
         font-size: 0.8rem;
-        color: $white;
+        color: var(--white);
         display: grid;
         place-content: center;
-        background-color: $primary;
+        background-color: var(--primary);
     }
 
     .time {
         font-size: 0.8rem;
-        color: $black-400;
+        color: var(--black-400);
     }
 
     .ellipsis {
-        color: $black-400;
+        color: var(--black-400);
         font-size: 1.5rem;
     }
 }

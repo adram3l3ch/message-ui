@@ -1,5 +1,5 @@
 .messages {
-    padding-inline: $padding-2 - 0.5rem;
+    padding-inline: calc(var(--padding-2) - 0.5rem);
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -26,7 +26,7 @@
         }
 
         &__icon:not(.up) {
-            color: $black-400;
+            color: var(--black-400);
         }
     }
 
@@ -36,9 +36,9 @@
         gap: 0.5rem;
         margin-inline: 0.5rem;
         padding: 0.5rem 1rem;
-        background-color: $white;
+        background-color: var(--white);
         border-radius: 0.5rem;
-        color: $black-600;
+        color: var(--black-600);
         margin-bottom: 1.5rem;
 
         &__icon {
@@ -63,13 +63,13 @@
         padding: 0.5rem;
 
         &:hover {
-            background-color: $white;
+            background-color: var(--white);
             cursor: pointer;
             user-select: none;
         }
 
         &__text {
-            color: $black-400;
+            color: var(--black-400);
             font-size: 0.85rem;
             display: flex;
             align-items: center;

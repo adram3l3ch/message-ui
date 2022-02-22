@@ -12,8 +12,14 @@ const Audio = () => {
             </div>
             {Array(6)
                 .fill(0)
-                .map((i) => (
-                    <img className="audio__strike" src={wave}></img>
+                .map((v, i) => (
+                    <img
+                        className="audio__strike"
+                        alt=""
+                        aria-hidden
+                        src={wave}
+                        key={i}
+                    ></img>
                 ))}
         </div>
     );
@@ -37,8 +43,10 @@ const SingleChat = ({ dp, className, name, messages, audio, image, time }) => {
                     {name} <span>{time}</span>
                 </h3>
                 <div className="message__flow">
-                    {messages.map((message) => (
-                        <p className="chat__text">{message}</p>
+                    {messages.map((message, i) => (
+                        <p className="chat__text" key={i}>
+                            {message}
+                        </p>
                     ))}
                     {audio && <Audio />}
                     {image && <Images />}

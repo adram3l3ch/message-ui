@@ -2,11 +2,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
-    padding: $padding-2;
+    padding: var(--padding-2);
 
     &__number {
         text-align: right;
-        color: $primary;
+        color: var(--primary);
     }
 
     &__profiles {
@@ -41,7 +41,7 @@
     border-radius: 50%;
     bottom: 0.1rem;
     right: 0.1rem;
-    background-color: $secondary;
+    background-color: var(--secondary);
     border: 1px solid white;
 }
 .green::before {

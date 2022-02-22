@@ -5,13 +5,8 @@ import Online from "../online/Online";
 import Profile from "../profile/Profile";
 
 const Home = () => {
-    const style = {
-        height: "100vh",
-        display: "flex",
-        flexDirection: "column",
-    };
     return (
-        <section className="home" style={style}>
+        <section className="home">
             <Profile />
             <Online />
             <Messages />
