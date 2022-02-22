@@ -7,7 +7,6 @@ import Profile from "../profile/Profile";
 const Home = () => {
     const style = {
         height: "100vh",
-        minWidth: "375px",
         display: "flex",
         flexDirection: "column",
     };

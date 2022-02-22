@@ -1,7 +1,7 @@
 .online {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: 1.5rem;
     padding: $padding-2;
 
     &__number {
@@ -12,14 +12,14 @@
     &__profiles {
         grid-column: span 2;
         display: flex;
-        gap: 1rem;
+        gap: 1.5rem;
     }
 
     &__profile {
         position: relative;
-        width: 3rem;
 
         &__image {
+            width: 3.5rem;
             border-radius: 50%;
             aspect-ratio: 1;
             object-position: top;
@@ -36,10 +36,10 @@
 .green::before {
     content: "";
     position: absolute;
-    width: 0.75rem;
+    width: 0.8rem;
     aspect-ratio: 1;
     border-radius: 50%;
-    bottom: 0.5rem;
+    bottom: 0.1rem;
     right: 0.1rem;
     background-color: $secondary;
     border: 1px solid white;

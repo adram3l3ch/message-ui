@@ -94,7 +94,7 @@
   height: -moz-min-content;
   height: min-content;
   padding: 1.5rem;
-  border-bottom: 2px solid #dadada;
+  border-bottom: 1px solid #dadada;
 }
 
 .profile__desc {
@@ -119,7 +119,7 @@
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  gap: 1.5rem;
   padding: 1.5rem;
 }
 
@@ -133,15 +133,15 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .online__profile {
   position: relative;
-  width: 3rem;
 }
 
 .online__profile__image {
+  width: 3.5rem;
   border-radius: 50%;
   aspect-ratio: 1;
   -o-object-position: top;
@@ -157,10 +157,10 @@
 .green::before {
   content: "";
   position: absolute;
-  width: 0.75rem;
+  width: 0.8rem;
   aspect-ratio: 1;
   border-radius: 50%;
-  bottom: 0.5rem;
+  bottom: 0.1rem;
   right: 0.1rem;
   background-color: #e04c32;
   border: 1px solid white;
@@ -172,6 +172,24 @@
 
 .messages {
   padding-inline: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.messages__flow {
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+.messages__flow::-webkit-scrollbar {
+  display: none;
 }
 
 .messages__header {
@@ -182,7 +200,7 @@
       -ms-flex-align: center;
           align-items: center;
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   margin-inline: 0.5rem;
 }
 
@@ -207,15 +225,16 @@
   background-color: #fff;
   border-radius: 0.5rem;
   color: #524b4b;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .messages__search__icon {
   font-size: 1.2rem;
+  margin-top: 0.15em;
 }
 
 .messages__search__input {
-  font-size: 0.9rem;
+  font-size: 1rem;
   width: 100%;
   border: none;
   outline: none;
@@ -243,17 +262,9 @@
           user-select: none;
 }
 
-.messages .message__content {
-  position: relative;
-  top: -3px;
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
-}
-
 .messages .message__text {
   color: #a8a8ac;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -262,6 +273,7 @@
           align-items: center;
   gap: 0.5rem;
   max-width: 200px;
+  margin-top: 0.1em;
 }
 
 .messages .message__text p {
@@ -312,6 +324,7 @@
 }
 
 .footer .images img {
+  width: 100%;
   aspect-ratio: 1;
   border-radius: 50%;
   border: 2px solid white;
@@ -375,17 +388,22 @@ img {
   max-height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  display: block;
 }
 
 body {
   font-family: "Poppins", sans-serif;
 }
 
+:root {
+  font-size: calc(1rem - 1px);
+}
+
 .app {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto 2fr 4fr 2fr;
-      grid-template-columns: auto 2fr 4fr 2fr;
+  -ms-grid-columns: auto auto 4fr 2fr;
+      grid-template-columns: auto auto 4fr 2fr;
 }
 
 .home {

@@ -27,15 +27,20 @@ img {
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
+    display: block;
 }
 
 body {
     font-family: "Poppins", sans-serif;
 }
 
+:root {
+    font-size: calc(1rem - 1px);
+}
+
 .app {
     display: grid;
-    grid-template-columns: auto 2fr 4fr 2fr;
+    grid-template-columns: auto auto 4fr 2fr;
 }
 
 .home {

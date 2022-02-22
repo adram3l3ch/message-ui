@@ -1,11 +1,24 @@
 .messages {
     padding-inline: $padding-2 - 0.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+
+    &__flow {
+        overflow: auto;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
 
     &__header {
         display: flex;
         align-items: center;
         gap: 1rem;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
         margin-inline: 0.5rem;
 
         .up {
@@ -26,14 +39,15 @@
         background-color: $white;
         border-radius: 0.5rem;
         color: $black-600;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
 
         &__icon {
             font-size: 1.2rem;
+            margin-top: 0.15em;
         }
 
         &__input {
-            font-size: 0.9rem;
+            font-size: 1rem;
             width: 100%;
             border: none;
             outline: none;
@@ -54,19 +68,14 @@
             user-select: none;
         }
 
-        &__content {
-            position: relative;
-            top: -3px;
-            flex-grow: 0;
-        }
-
         &__text {
             color: $black-400;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             display: flex;
             align-items: center;
             gap: 0.5rem;
             max-width: 200px;
+            margin-top: 0.1em;
             p {
                 white-space: nowrap;
                 overflow: hidden;
