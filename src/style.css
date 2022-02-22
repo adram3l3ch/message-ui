@@ -1,9 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 .menubar {
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
   background: #fff;
   height: 100vh;
+  padding: 2rem 1rem;
 }
 
 .menubar__icons {
@@ -13,7 +15,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 2rem 1rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -21,11 +22,11 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .menubar__icons .menubar__icon {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: #524b4b;
   cursor: pointer;
   position: relative;
@@ -44,8 +45,8 @@
   content: "";
   background-color: #2748dd;
   width: 0.5rem;
-  height: 130%;
-  left: -1.5rem;
+  height: 150%;
+  left: -1.6rem;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -81,6 +82,276 @@
   left: 3px;
 }
 
+.profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  padding: 1.5rem;
+  border-bottom: 2px solid #dadada;
+}
+
+.profile__desc {
+  font-size: 0.9rem;
+  color: #a8a8ac;
+  -webkit-margin-before: -0.2em;
+          margin-block-start: -0.2em;
+}
+
+.profile__avatar {
+  width: 3.5rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  -o-object-position: top;
+     object-position: top;
+  padding: 0.1rem;
+  border: 3px solid #2748dd;
+}
+
+.online {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.online__number {
+  text-align: right;
+  color: #2748dd;
+}
+
+.online__profiles {
+  grid-column: span 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+.online__profile {
+  position: relative;
+  width: 3rem;
+}
+
+.online__profile__image {
+  border-radius: 50%;
+  aspect-ratio: 1;
+  -o-object-position: top;
+     object-position: top;
+}
+
+.red,
+.green {
+  position: relative;
+}
+
+.red::before,
+.green::before {
+  content: "";
+  position: absolute;
+  width: 0.75rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  bottom: 0.5rem;
+  right: 0.1rem;
+  background-color: #e04c32;
+  border: 1px solid white;
+}
+
+.green::before {
+  background-color: #18e718;
+}
+
+.messages {
+  padding-inline: 1rem;
+}
+
+.messages__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  margin-inline: 0.5rem;
+}
+
+.messages__header .up {
+  margin-right: auto;
+}
+
+.messages__header__icon:not(.up) {
+  color: #a8a8ac;
+}
+
+.messages__search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  margin-inline: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  color: #524b4b;
+  margin-bottom: 1rem;
+}
+
+.messages__search__icon {
+  font-size: 1.2rem;
+}
+
+.messages__search__input {
+  font-size: 0.9rem;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+.messages .message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.messages .message:hover {
+  background-color: #fff;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.messages .message__content {
+  position: relative;
+  top: -3px;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+
+.messages .message__text {
+  color: #a8a8ac;
+  font-size: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  max-width: 200px;
+}
+
+.messages .message__text p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.footer {
+  margin: 1.5rem;
+  margin-top: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  background-color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.footer .live {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.1rem 0.3rem;
+  font-weight: 500;
+  border-radius: 0.3rem;
+  background-color: #f3f3f4bb;
+  color: #2748dd;
+}
+
+.footer .live p {
+  font-size: 0.9rem;
+}
+
+.footer .images {
+  position: relative;
+  margin-left: auto;
+  width: 25px;
+  aspect-ratio: 1;
+}
+
+.footer .images img {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.footer .images img:nth-of-type(1) {
+  position: absolute;
+  left: 20%;
+  top: 20%;
+  z-index: 1;
+}
+
+.footer .images img:nth-of-type(2) {
+  position: absolute;
+  right: 20%;
+  bottom: 20%;
+}
+
+.footer .number {
+  width: 1.5rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  color: #fff;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  background-color: #2748dd;
+}
+
+.footer .time {
+  font-size: 0.8rem;
+  color: #a8a8ac;
+}
+
+.footer .ellipsis {
+  color: #a8a8ac;
+  font-size: 1.5rem;
+}
+
 *,
 *::after,
 *::before {
@@ -89,7 +360,35 @@
   margin: 0;
 }
 
+h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 body {
-  background-color: #f3f3f4;
+  font-family: "Poppins", sans-serif;
+}
+
+.app {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 2fr 4fr 2fr;
+      grid-template-columns: auto 2fr 4fr 2fr;
+}
+
+.home {
+  background-color: #f3f3f4bb;
 }
 /*# sourceMappingURL=style.css.map */

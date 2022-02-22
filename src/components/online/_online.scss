@@ -1,0 +1,49 @@
+.online {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: $padding-2;
+
+    &__number {
+        text-align: right;
+        color: $primary;
+    }
+
+    &__profiles {
+        grid-column: span 2;
+        display: flex;
+        gap: 1rem;
+    }
+
+    &__profile {
+        position: relative;
+        width: 3rem;
+
+        &__image {
+            border-radius: 50%;
+            aspect-ratio: 1;
+            object-position: top;
+        }
+    }
+}
+
+.red,
+.green {
+    position: relative;
+}
+
+.red::before,
+.green::before {
+    content: "";
+    position: absolute;
+    width: 0.75rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    bottom: 0.5rem;
+    right: 0.1rem;
+    background-color: $secondary;
+    border: 1px solid white;
+}
+.green::before {
+    background-color: rgb(24, 231, 24);
+}

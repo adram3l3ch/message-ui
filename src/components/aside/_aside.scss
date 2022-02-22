@@ -2,19 +2,19 @@
     width: min-content;
     background: $white;
     height: 100vh;
+    padding: $padding-1;
 
     &__icons {
         height: 100%;
         list-style: none;
         padding: 0;
         display: flex;
-        padding: 2rem 1rem;
         flex-direction: column;
         align-items: center;
-        gap: 1.5rem;
+        gap: 2rem;
 
         .menubar__icon {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             color: $black-600;
             cursor: pointer;
             position: relative;
@@ -31,8 +31,8 @@
                     content: "";
                     background-color: $primary;
                     width: 0.5rem;
-                    height: 130%;
-                    left: -1.5rem;
+                    height: 150%;
+                    left: -1.6rem;
                     top: 50%;
                     transform: translateY(-50%);
                     border-radius: 1rem;

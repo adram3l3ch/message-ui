@@ -1,0 +1,23 @@
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    height: min-content;
+    padding: $padding-2;
+    border-bottom: 2px solid $black-300;
+
+    &__desc {
+        font-size: 0.9rem;
+        color: $black-400;
+        margin-block-start: -0.2em;
+    }
+
+    &__avatar {
+        width: 3.5rem;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        object-position: top;
+        padding: 0.1rem;
+        border: 3px solid $primary;
+    }
+}
