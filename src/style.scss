@@ -5,6 +5,7 @@
 @import "./components/online/online";
 @import "./components/messages/messages";
 @import "./components/footer/footer";
+@import "./components/chat/chat";
 
 *,
 *::after,
@@ -40,7 +41,7 @@ body {
 
 .app {
     display: grid;
-    grid-template-columns: auto auto 4fr 2fr;
+    grid-template-columns: auto auto 5fr 2fr;
 }
 
 .home {
