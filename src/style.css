@@ -8,8 +8,8 @@
   --white: #161819;
   --black-200: #191d1e;
   --black-300: #2c3335;
-  --black-400: #757575;
-  --black-600: #6d6464;
+  --black-400: #979797;
+  --black-600: #404247;
   --black-800: #fff;
   --primary: #1355ff;
   --primary-400: #1356ff4d;
@@ -18,10 +18,10 @@
 
 .light {
   --white: #fff;
-  --black-200: #f5f5f5;
+  --black-200: #f7f7f7;
   --black-300: #dadada;
-  --black-400: #a8a8ac;
-  --black-600: #6d6464;
+  --black-400: #9c9c9c;
+  --black-600: #f0f0f0;
   --black-800: #1a1818;
   --primary: #1355ff;
   --primary-400: #1356ff4d;
@@ -56,7 +56,7 @@
 
 .menubar__icons .menubar__icon {
   font-size: 1.25rem;
-  color: var(--black-600);
+  color: var(--black-400);
   cursor: pointer;
   position: relative;
 }
@@ -84,7 +84,7 @@
 
 .menubar__icons .logo {
   background-color: var(--primary);
-  color: var(--white);
+  color: white;
   width: 2rem;
   height: 2rem;
   display: -webkit-box;
@@ -259,7 +259,7 @@
   padding: 0.5rem 1rem;
   background-color: var(--white);
   border-radius: 0.5rem;
-  color: var(--black-600);
+  color: var(--black-400);
   margin-bottom: 1.5rem;
 }
 
@@ -274,6 +274,7 @@
   border: none;
   outline: none;
   font-family: inherit;
+  background: none;
 }
 
 .messages .message {
@@ -512,12 +513,13 @@
 
 .chat__text {
   padding: 0.5rem 1rem;
-  background-color: var(--black-200);
+  background-color: var(--black-600);
   font-size: 1rem;
   border-radius: 2rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  color: var(--black-800);
 }
 
 .chat__user__name {
@@ -547,7 +549,7 @@
   margin-top: 0.5rem;
   border-radius: 2em 0em 2em 2rem;
   background-color: var(--primary);
-  color: var(--white);
+  color: white;
   margin-left: auto;
 }
 
@@ -564,7 +566,7 @@
   display: flex;
   padding: 0 1rem;
   padding-right: 1.7rem;
-  background-color: var(--black-200);
+  background-color: var(--black-600);
   font-size: 0.9rem;
   border-radius: 2rem;
   width: -webkit-max-content;
@@ -620,6 +622,7 @@
   margin: var(--padding-2);
   margin-top: auto;
   margin-bottom: 2rem;
+  background-color: var(--black-200);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -646,6 +649,7 @@
   border: none;
   outline: none;
   font-family: inherit;
+  background: none;
 }
 
 .chat__form .form__icon {
@@ -780,7 +784,7 @@
   display: grid;
   place-content: center;
   border-radius: 0.5rem;
-  color: var(--black-600);
+  color: var(--black-400);
   font-size: 1.5rem;
 }
 
@@ -792,7 +796,13 @@
   margin: 0;
 }
 
+* {
+  -webkit-transition: background-color 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
 h2 {
+  color: var(--black-800);
   font-size: 1.2rem;
   font-weight: 600;
 }
@@ -800,6 +810,7 @@ h2 {
 h3 {
   font-size: 0.95rem;
   font-weight: 500;
+  color: var(--black-800);
 }
 
 img {
@@ -829,6 +840,7 @@ body {
 .app {
   width: 90vw;
   height: 90vh;
+  min-height: 700px;
   max-width: 2000px;
   display: -ms-grid;
   display: grid;
@@ -868,5 +880,85 @@ body {
   .home {
     display: none;
   }
+}
+
+.attribution {
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.theme-toggle {
+  position: fixed;
+  z-index: 5;
+  width: 5rem;
+  bottom: 2rem;
+  right: 2rem;
+  aspect-ratio: 1;
+  background: var(--black-800);
+  color: var(--black-200);
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.light .theme-toggle {
+  -webkit-animation: spinRight 0.5s linear forwards;
+          animation: spinRight 0.5s linear forwards;
+}
+
+.dark .theme-toggle {
+  -webkit-animation: spinLeft 0.5s linear forwards;
+          animation: spinLeft 0.5s linear forwards;
+}
+
+@-webkit-keyframes spinRight {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+}
+
+@keyframes spinRight {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+}
+
+@-webkit-keyframes spinLeft {
+  from {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes spinLeft {
+  from {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+input {
+  color: var(--black-800);
 }
 /*# sourceMappingURL=style.css.map */

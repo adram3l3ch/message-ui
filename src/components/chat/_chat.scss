@@ -86,10 +86,11 @@
 
     &__text {
         padding: 0.5rem 1rem;
-        background-color: var(--black-200);
+        background-color: var(--black-600);
         font-size: 1rem;
         border-radius: 2rem;
         width: fit-content;
+        color: var(--black-800);
     }
 
     &__user__name {
@@ -116,7 +117,7 @@
             margin-top: 0.5rem;
             border-radius: 2em 0em 2em 2rem;
             background-color: var(--primary);
-            color: var(--white);
+            color: white;
             margin-left: auto;
         }
     }
@@ -133,7 +134,7 @@
     display: flex;
     padding: 0 1rem;
     padding-right: 1.7rem;
-    background-color: var(--black-200);
+    background-color: var(--black-600);
     font-size: 0.9rem;
     border-radius: 2rem;
     width: max-content;
@@ -179,6 +180,7 @@
     margin: var(--padding-2);
     margin-top: auto;
     margin-bottom: 2rem;
+    background-color: var(--black-200);
     display: flex;
     align-items: center;
     padding: 0.5rem 1rem;
@@ -199,6 +201,7 @@
         border: none;
         outline: none;
         font-family: inherit;
+        background: none;
     }
 
     .form__icon {

@@ -38,7 +38,7 @@
         padding: 0.5rem 1rem;
         background-color: var(--white);
         border-radius: 0.5rem;
-        color: var(--black-600);
+        color: var(--black-400);
         margin-bottom: 1.5rem;
 
         &__icon {
@@ -52,6 +52,7 @@
             border: none;
             outline: none;
             font-family: inherit;
+            background: none;
         }
     }
 
