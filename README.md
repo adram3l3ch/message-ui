@@ -1,4 +1,23 @@
-# Getting Started with Create React App
+# Message App UI
+
+### Screenshot
+
+![](./design.png)
+
+### Links
+
+-   Solution URL: [Github](https://github.com/adram3l3ch/message-ui)
+-   Live Site URL: [Netlify](https://adramelech-message-ui.netlify.app/)
+
+### Built with
+
+-   Semantic HTML5 markup
+-   CSS custom properties
+-   CSS Grid
+-   Flexbox
+-   React-Icons
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
